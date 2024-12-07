@@ -13,7 +13,7 @@ module.exports = function(eleventyConfig) {
   // Watch targets
   eleventyConfig.addWatchTarget("./src/styles/");
 
-  var pathPrefix = "";
+  var pathPrefix = "rotarycolleferro";
   if (process.env.GITHUB_REPOSITORY) {
     pathPrefix = process.env.GITHUB_REPOSITORY.split('/')[1];
   }
