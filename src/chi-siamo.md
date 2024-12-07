@@ -4,20 +4,31 @@ headline: Il Club
 page_id: chi-siamo
 ---
 
-## Consiglio direttivo
 
-Il consiglio direttivo è composto da:
+## Direttivo 2024-2025
+
 
 - Alfredo Maria Galiano
   
   Presidente
 
 
+- Tommaso Rosario Galiano
+
+  Vicepresidente
+
+
+- Pietro Sperati
+
+  Segretario
+
+  
 - Roberto di Bari
   
   Tesoriere
 
-- 
 
+- Piera Morgia
 
-## Regolamento
+  Prefetto
+
