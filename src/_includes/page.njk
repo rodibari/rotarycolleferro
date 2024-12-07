@@ -20,7 +20,7 @@
 
   <title>{{ title or metadata.title }}</title>
 
-  <link rel="stylesheet" href="{{ '/site.css' | url }}" />
+  <link rel="stylesheet" href="/site.css" />
 
   <style>
     #menu-toggle:checked+#menu {
@@ -122,6 +122,7 @@
             </h1>
             <p class="text-blue-100 text-xl md:text-2xl leading-snug mt-4">
               {{ subheadline }}
+              Current page: {{ page.url }}
             </p>
           </div>
         </div>
@@ -129,7 +130,7 @@
     </div>
     <!-- end hero -->    
     <!-- start about -->
-    <section class="page-content relative px-4 py-16 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 lg:py-32">
+    <section class="prose lg:prose-xl max-w-none relative px-4 py-16 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 lg:py-32">
       <p>{{ content | safe }}</p>
     </section>
     <!-- end about -->
