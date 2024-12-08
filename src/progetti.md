@@ -1,7 +1,6 @@
 ---
 layout: page
 headline: Progetti
-page_id: progetti
 ---
 
 ## Progetti

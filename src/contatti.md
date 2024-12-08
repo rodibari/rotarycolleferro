@@ -1,7 +1,6 @@
 ---
 layout: page
 headline: Contatti
-page_id: contatti
 ---
 
 ### Rotary Club Colleferro
@@ -19,4 +18,7 @@ Conviviale: Giovedì alle 20:30
 
 ---
 
-colleferro@rotary2080.org
+![email](/images/email-icon.svg) [colleferro@rotary2080.org](mailto:colleferro@rotary2080.org)
+
+![facebook](/images/facebook-icon.svg) [facebook](https://www.facebook.com/groups/261320563918544)
+

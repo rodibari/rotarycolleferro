@@ -3,17 +3,17 @@ const htmlmin = require("html-minifier-terser");
 
 module.exports = async function(eleventyConfig) {
 
-  // const { EleventyHtmlBasePlugin } = await import("@11ty/eleventy");
-  // eleventyConfig.addPlugin(EleventyHtmlBasePlugin, {
-	// 	// The base URL: defaults to Path Prefix
-	// 	// baseHref: eleventyConfig.pathPrefix,
-	// 	// But you could use a full URL here too:
-	// 	// baseHref: "http://example.com/"
+  const { EleventyHtmlBasePlugin } = await import("@11ty/eleventy");
+  eleventyConfig.addPlugin(EleventyHtmlBasePlugin, {
+		// The base URL: defaults to Path Prefix
+		baseHref: "rotarycolleferro",
+		// But you could use a full URL here too:
+		// baseHref: "http://example.com/"
 
-	// 	// Comma separated list of output file extensions to apply
-	// 	// our transform to. Use `false` to opt-out of the transform.
-	//   extensions: "html,njk",
-	// });
+		// Comma separated list of output file extensions to apply
+		// our transform to. Use `false` to opt-out of the transform.
+	  extensions: "html,njk",
+	});
 
 
   if (process.env.ELEVENTY_PRODUCTION) {
@@ -26,7 +26,7 @@ module.exports = async function(eleventyConfig) {
   // Watch targets
   eleventyConfig.addWatchTarget("./src/styles/");
 
-  var pathPrefix = "";
+  var pathPrefix = "rotarycolleferro";
   if (process.env.GITHUB_REPOSITORY) {
     pathPrefix = process.env.GITHUB_REPOSITORY.split('/')[1];
   }
@@ -36,7 +36,7 @@ module.exports = async function(eleventyConfig) {
     dir: {
       input: "src"
     },
-    pathPrefix
+    // pathPrefix
   }
 };
 

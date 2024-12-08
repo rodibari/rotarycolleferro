@@ -1,7 +1,6 @@
 ---
 layout: page
 headline: Il Club
-page_id: chi-siamo
 ---
 
 
