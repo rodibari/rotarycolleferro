@@ -1,21 +1,24 @@
 const fs = require("fs");
 const htmlmin = require("html-minifier-terser");
 
-module.exports = async function(eleventyConfig) {
+module.exports = async function (eleventyConfig) {
+  console.log('******** BEGIN: .eleventy:5 ********');
+  console.dir(eleventyConfig, { depth: null, colors: true });
+  console.log('********   END: .eleventy:5 ********');
 
   const { EleventyHtmlBasePlugin } = await import("@11ty/eleventy");
-  eleventyConfig.addPlugin(EleventyHtmlBasePlugin, {
-		// The base URL: defaults to Path Prefix
-		baseHref: "rotarycolleferro",
-		// But you could use a full URL here too:
-		// baseHref: "http://example.com/"
 
-		// Comma separated list of output file extensions to apply
-		// our transform to. Use `false` to opt-out of the transform.
-	  extensions: "html,njk",
-	});
-
-
+  let markdownIt = require("markdown-it");
+  var markdownItAttrs = require('markdown-it-attrs');
+  let options = {
+    html: true,
+    breaks: false,
+    linkify: false
+  };
+  
+  let markdownLib = markdownIt(options).use(markdownItAttrs);
+  eleventyConfig.setLibrary("md", markdownLib);
+  
   if (process.env.ELEVENTY_PRODUCTION) {
     eleventyConfig.addTransform("htmlmin", htmlminTransform);
   }
@@ -31,17 +34,24 @@ module.exports = async function(eleventyConfig) {
     pathPrefix = process.env.GITHUB_REPOSITORY.split('/')[1];
   }
 
+  eleventyConfig.addPlugin(EleventyHtmlBasePlugin,
+    { 
+      baseHref: pathPrefix,
+      extensions: "html" 
+    }
+  );
+
 
   return {
     dir: {
       input: "src"
     },
-    // pathPrefix
+    pathPrefix
   }
 };
 
 function htmlminTransform(content, outputPath) {
-  if( outputPath.endsWith(".html") ) {
+  if (outputPath.endsWith(".html")) {
     let minified = htmlmin.minify(content, {
       useShortDoctype: true,
       removeComments: true,

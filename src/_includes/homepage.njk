@@ -20,83 +20,8 @@
 
   <title>{{ title or metadata.title }}</title>
 
-  <link rel="stylesheet" href="{{ '/site.css' | url }}" />
-
-  <style>
-    #menu-toggle:checked+#menu {
-      display: block;
-    }
-
-    #dropdown-toggle:checked+#dropdown {
-      display: block;
-    }
-
-    a,
-    span {
-      position: relative;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    a.arrow,
-    span.arrow {
-      display: flex;
-      align-items: center;
-      font-weight: 600;
-      line-height: 1.5;
-    }
-
-    a.arrow .arrow_icon,
-    span.arrow .arrow_icon {
-      position: relative;
-      margin-left: 0.5em;
-    }
-
-    a.arrow .arrow_icon svg,
-    span.arrow .arrow_icon svg {
-      transition: transform 0.3s 0.02s ease;
-      margin-right: 1em;
-    }
-
-    a.arrow .arrow_icon::before,
-    span.arrow .arrow_icon::before {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 50%;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: #38b2ac;
-      transform: translateY(-50%);
-      transition: width 0.3s ease;
-    }
-
-    a.arrow:hover .arrow_icon::before,
-    span.arrow:hover .arrow_icon::before {
-      width: 1em;
-    }
-
-    a.arrow:hover .arrow_icon svg,
-    span.arrow:hover .arrow_icon svg {
-      transform: translateX(0.75em);
-    }
-
-    /* .cover {
-      border-bottom-right-radius: 128px;
-    } */
-
-    .bg-blue-teal-gradient {
-      background: rgb(23, 69, 143);
-      background: linear-gradient(90deg, rgba(23, 69, 143, 1) 0%, rgba(23, 69, 143, 1) 100%);
-    }
-
-    /* @media (min-width: 1024px) {
-      .cover {
-        border-bottom-right-radius: 256px;
-      }
-    } */
-  </style>  
+  <link rel="stylesheet" href="/site.css" />
+  <link rel="stylesheet" href="/style.css" />
 </head>
 
 
@@ -128,8 +53,9 @@
     </div>
     <!-- end hero -->    
     <!-- start about -->
-    <section class="relative px-4 py-16 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 lg:py-32">
-      <p>{{ content | safe }}</p>
+  
+    <section class="prose lg:prose-xl max-w-none relative px-4 py-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 lg:py-12">
+      {{ content | safe }}
     </section>
     <!-- end about -->
     <!-- start footer -->
