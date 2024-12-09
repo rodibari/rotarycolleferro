@@ -2,10 +2,6 @@ const fs = require("fs");
 const htmlmin = require("html-minifier-terser");
 
 module.exports = async function (eleventyConfig) {
-  console.log('******** BEGIN: .eleventy:5 ********');
-  console.dir(eleventyConfig, { depth: null, colors: true });
-  console.log('********   END: .eleventy:5 ********');
-
   const { EleventyHtmlBasePlugin } = await import("@11ty/eleventy");
 
   let markdownIt = require("markdown-it");
