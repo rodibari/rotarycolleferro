@@ -7,27 +7,28 @@ headline: Il Club
 ## Direttivo 2024-2025
 
 
-- Alfredo Maria Galiano
+**Alfredo Maria Galiano**
   
   Presidente
 
 
-- Tommaso Rosario Galiano
+
+**Tommaso Rosario Galiano**
 
   Vicepresidente
 
 
-- Pietro Sperati
+**Pietro Sperati**
 
   Segretario
 
   
-- Roberto di Bari
+**Roberto Di Bari**
   
   Tesoriere
 
 
-- Piera Morgia
+**Piera Morgia**
 
   Prefetto
 
